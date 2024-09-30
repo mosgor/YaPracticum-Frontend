@@ -259,7 +259,7 @@
   width: 90%;
   justify-content: space-between;
   margin: auto;
-  height: 250px;
+  min-height: 250px;
 }
 
 .footer__column_content_copyright {
@@ -282,13 +282,13 @@
   font-weight: 600;
 }
 
-.footer__links {
+.footer__column-links {
   display: flex;
   flex-direction: column;
   margin: 20px 0 16px 0;
 }
 
-.footer__link {
+.footer__column-link {
   text-decoration: none;
   line-height: 30px;
   font-size: 18px;
@@ -296,11 +296,12 @@
   color: white;
 }
 
-.footer__link_type_social {
+.footer__column-link_type_social {
   color: grey;
 }
 
-.footer__social_icon {
+.footer__social-icon {
+	margin-right: 10px;
   height: 16px;
   width: 16px;
 }
