@@ -1,0 +1,5 @@
+.header__lang-links {
+  gap: 18px;
+  display: flex;
+  justify-self: end;
+}
