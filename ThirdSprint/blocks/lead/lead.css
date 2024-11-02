@@ -2,12 +2,12 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 77%;
+  width: calc(100vw - 148px * 2);
 }
 
 @media screen and (max-width: 1024px) {
   .lead {
-    width: 91%;
+    width: calc(100vw - 48px * 2);
   }
 }
 
