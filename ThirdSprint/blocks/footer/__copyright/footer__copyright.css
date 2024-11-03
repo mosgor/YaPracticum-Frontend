@@ -1,0 +1,14 @@
+.footer__copyright {
+  font-family: 'Inter-Regular', Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.125;
+  font-weight: normal;
+  justify-self: end;
+}
+
+@media screen and (max-width: 700px) {
+  .footer__copyright {
+    justify-self: start;
+    margin-top: 48px;
+  }
+}

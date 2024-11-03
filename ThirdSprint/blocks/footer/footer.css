@@ -1,0 +1,18 @@
+.footer {
+  display: grid;
+  grid-auto-flow: column;
+  padding: 92px 48px 24px 48px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 88px 24px 24px 24px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer {
+    grid-auto-flow: row;
+    padding: 64px 0 24px 16px;
+  }
+}

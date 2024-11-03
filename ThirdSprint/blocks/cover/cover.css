@@ -1,0 +1,29 @@
+.cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: calc(100% - 48px * 2);
+  height: calc((100vw - 48px * 2) * 0.625);
+  margin: 92px auto auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .cover {
+    width: 100%;
+    height: calc(100vw * 0.625);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cover {
+    margin-top: 90px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .cover {
+    margin-top: 66px;
+  }
+}
