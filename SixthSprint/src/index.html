@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="<%=require('./images/fav/fav32.svg')%>" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="<%=require('./images/fav/fav152.png')%>">
+  <meta name="theme-color" content="#000000" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto</title>
+</head>
+
+<body class="page">
+
+<header class="header">
+  <a class="header__link" href="#" title="Mesto Russia">
+    <img class="header__logo" src="<%=require('./images/header__logo.png')%>" alt="Логотип Место">
+  </a>
+</header>
+
+<main class="content">
+  <section class="profile">
+    <button class="profile__edit-avatar-button button" aria-label="Редактировать аватар"></button>
+    <img src="<%=require('./images/avatars/profile__avatar.jpg')%>" alt="Подпись" class="profile__avatar">
+    <div class="profile__title-group">
+      <h1 class="profile__title">Имя пользователя</h1>
+      <button class="profile__button button" type="button" aria-label="Редактировать профиль"></button>
+      <p class="profile__about">Подпись пользователя</p>
+    </div>
+    <button class="profile__add-button button" type="button" aria-label="Добавить место"></button>
+  </section>
+  <section class="gallery">
+    <ul class="photo-cards">
+    </ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <p class="footer__copyright">© 2024 Mesto Russia</p>
+</footer>
+
+<!-- Card Template -->
+<template id="photo-card">
+  <li>
+    <article class="photo-card">
+      <button class="photo-card__delete button" type="button" aria-label="Удалить место"></button>
+      <img class="photo-card__image button" alt="Изображение" src="<%=require('./images/avatars/profile__avatar.jpg')%>" >
+      <div class="photo-card__footer">
+        <p class="photo-card__title"></p>
+        <div class="photo-card__like-container">
+          <button class="photo-card__like-button button" type="button" aria-label="Поставить лайк"></button>
+          <p class="photo-card__like-counter"></p>
+        </div>
+      </div>
+    </article>
+  </li>
+</template>
+
+<!-- Edit profile popup -->
+<div class="popup popup_edit_profile">
+  <div class="popup__container">
+    <button class="popup__close-button button" type="button" aria-label="Закрыть всплывающее окно"></button>
+    <h2 class="popup__title">Редактировать профиль</h2>
+    <form class="popup__form" name="profileForm">
+      <fieldset class="popup__fieldset">
+        <label class="popup__input-group" for="profile_name">
+          <input class="popup__input" type="text" placeholder="Имя" value="" name="name" id="profile_name" required minlength="2" maxlength="40">
+          <span class="popup__error" id="profile_name-error"></span>
+        </label>
+        <label class="popup__input-group" for="profile_about">
+          <input class="popup__input" type="text" placeholder="Подпись" value="" name="about" id="profile_about" required minlength="2" maxlength="400">
+          <span class="popup__error" id="profile_about-error"></span>
+        </label>
+      </fieldset>
+      <button class="popup__submit" type="submit" data-value="Сохранить">Сохранить</button>
+    </form>
+  </div>
+</div>
+
+<!-- New place popup. Sprint 5 -->
+<div class="popup popup_new-place">
+  <div class="popup__container">
+    <button class="popup__close-button button" type="button" aria-label="Закрыть всплывающее окно"></button>
+    <h2 class="popup__title">Новое место</h2>
+    <form class="popup__form" name="newPlaceForm" novalidate>
+      <fieldset class="popup__fieldset">
+        <label class="popup__input-group" for="place_name">
+          <input class="popup__input" type="text" placeholder="Имя" value="" name="name" id="place_name" required minlength="2" maxlength="30">
+          <span class="popup__error" id="place_name-error"></span>
+        </label>
+        <label class="popup__input-group" for="place_url">
+          <input class="popup__input" type="url" placeholder="Ссылка на место" value="" name="link" id="place_url"
+                 required>
+          <span class="popup__error" id="place_url-error"></span>
+        </label>
+      </fieldset>
+      <button class="popup__submit" type="submit" data-value="Создать">Создать</button>
+    </form>
+  </div>
+</div>
+
+<!-- View image popup. Sprint 5 -->
+<div class="popup popup_view_image">
+  <div class="popup__container popup__container_image-view">
+    <button class="popup__close-button button" type="button" aria-label="Закрыть всплывающее окно"></button>
+    <figure class="popup__figure">
+      <img class="popup__image" src="<%=require('./images/avatars/profile__avatar.jpg')%>" alt="Описание">
+      <figcaption class="popup__caption"></figcaption>
+    </figure>
+  </div>
+</div>
+
+<!-- Delete card popup. Sprint 9 -->
+<div class="popup popup_delete-place">
+  <div class="popup__container popup__container_delete-place">
+    <button class="popup__close-button button" type="button" aria-label="Закрыть всплывающее окно"></button>
+    <form class="popup__form popup__form_image_delete">
+      <h2 class="popup__title">Вы уверены?</h2>
+      <button class="popup__submit popup__submit_image_delete" type="submit" data-value="Да">Да</button>
+    </form>
+  </div>
+</div>
+
+<!-- Update avatar popup. Sprint 9 -->
+<div class="popup popup_update-avatar">
+  <div class="popup__container popup__container_update-avatar">
+    <button class="popup__close-button button" type="button" aria-label="Закрыть всплывающее окно"></button>
+    <h2 class="popup__title">Обновить аватар</h2>
+    <form class="popup__form" name="updateAvatarForm" novalidate>
+      <fieldset class="popup__fieldset">
+        <label class="popup__input-group" for="avatar_url">
+          <input class="popup__input" type="url" placeholder="Ссылка на аватар" value="" name="avatar" id="avatar_url"
+                 required>
+          <span class="popup__error" id="avatar_url-error"></span>
+        </label>
+      </fieldset>
+      <button class="popup__submit" type="submit" data-value="Сохранить">Сохранить</button>
+    </form>
+  </div>
+</div>
+
+</body>
+
+</html>

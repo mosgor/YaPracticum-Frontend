@@ -1,0 +1,18 @@
+.gallery {
+  max-width: 880px;
+  min-height: 366px; /* чтобы футер не взлетал вверх если нет карточек */
+  margin: 0 auto;
+  padding-top: 51px;
+}
+
+@media screen and (max-width: 1023px) {
+  .gallery {
+    padding: 51px 19px 0;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .photo-cards {
+    padding: 36px 19px 0;
+  }
+}

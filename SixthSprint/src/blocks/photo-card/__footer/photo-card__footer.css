@@ -1,0 +1,7 @@
+.photo-card__footer {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 20px 22px 21px;
+}

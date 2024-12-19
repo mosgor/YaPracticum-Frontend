@@ -1,0 +1,20 @@
+.profile__button {
+  border: 1px solid #fff;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../../images/profile__button.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  grid-column: 2/-1;
+  grid-row: 1/2;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 740px) {
+  .profile__button {
+    width: 18px;
+    height: 18px;
+    margin-top: 8px;
+  }
+}
