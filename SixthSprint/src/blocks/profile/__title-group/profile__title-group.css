@@ -1,0 +1,18 @@
+.profile__title-group {
+  margin: 22px 0 0 30px;
+  display: grid;
+  grid-template-columns: auto 24px;
+  grid-template-rows: repeat(2, auto);
+  column-gap: 18px;
+  align-self: start;
+  max-width: 500px; /* если имя слишком длинное */
+}
+
+@media screen and (max-width: 740px) {
+  .profile__title-group {
+    margin: 26px auto 0;
+    grid-template-columns: auto 18px;
+    column-gap: 10px;
+    max-width: 300px;
+  }
+}

@@ -1,0 +1,11 @@
+.popup__error {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  color: #ff0000;
+  margin-top: 5px;
+  opacity: 0;
+  transition: 0.3s;
+  min-height: 24px; /* зарезервировать место под ошибку */
+}
