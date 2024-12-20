@@ -6,9 +6,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mosgor/YaPracticum-Frontend.git"
+    "url": "git+https://github.com/mosgor/YaPracticum-Frontend/tree/gh-pages"
   },
-  "homepage": "https://github.com/mosgor/YaPracticum-Frontend/SixthSprint#readme",
+  "homepage": "https://github.com/mosgor/YaPracticum-Frontend/tree/master/SixthSprint#readme",
   "scripts": {
     "build": "rimraf dist && webpack --mode production",
     "dev": "webpack serve",
