@@ -1,0 +1,15 @@
+.photo-card__delete {
+  position: absolute;
+  width: 18px;
+  height: 19px;
+  right: 20px;
+  top: 20px;
+  background-image: url("../../../images/photo-card__delete.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  object-fit: contain;
+  border: none;
+  padding: 0;
+  z-index: 10;
+}
