@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "name": "Флюоресцентный люминесцентный био-марсианский бургер",
+  "order": {
+    "createdAt": "2024-04-20T13:29:40.782Z",
+    "ingredients": {
+      "calories": 643,
+      "carbohydrates": 85,
+      "fat": 26,
+      "image": "https://code.s3.yandex.net/react/code/bun-01.png",
+      "image_large": "https://code.s3.yandex.net/react/code/bun-01-large.png",
+      "image_mobile": "https://code.s3.yandex.net/react/code/bun-01-mobile.png",
+      "name": "Флюоресцентная булка R2-D3",
+      "price": 988,
+      "proteins": 44,
+      "type": "bun",
+      "_id": "643d69a5c3f7b9001cfa093d"
+    },
+    "_id": "6623c34497ede0001d066c4b",
+    "name": "Флюоресцентный люминесцентный био-марсианский бургер",
+    "number": 38483,
+    "owner": {
+      "email": "nigilen@gmail.com",
+      "name": "Nikola",
+      "createdAt": "2024-04-03T12:09:44.278Z",
+      "updatedAt": "2024-04-12T12:06:09.411Z"
+    },
+    "price": 3388,
+    "status": "done",
+    "updatedAt": "2024-04-20T13:29:41.415Z"
+  }
+}
